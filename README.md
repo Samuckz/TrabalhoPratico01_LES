@@ -40,7 +40,7 @@ Antes de instalar o Apache Spark, certifique-se de que você tenha o seguinte in
 
 1. **Java**: O Apache Spark requer o Java 8 ou superior. Você pode verificar a versão Java instalada com o seguinte comando:
 
-   ```bash
+   ```
    java -version
 
 Se o Java não estiver instalado ou estiver em uma versão anterior, siga as etapas abaixo para instalá-lo no seu sistema operacional.
@@ -55,7 +55,7 @@ Se o Java não estiver instalado ou estiver em uma versão anterior, siga as eta
 
 Abra um terminal e execute os seguintes comandos:
 
-```bash
+```
 sudo apt update
 sudo apt install default-jre
 sudo apt install default-jdk
@@ -70,14 +70,14 @@ sudo apt install default-jdk
 
 1. Extraia o arquivo baixado em um diretório de sua escolha. Você pode usar um comando como este:
 
-   ```bash
+   ```
    tar -xzf spark-3.2.0-bin-hadoop3.2.tgz
    ```
 Certifique-se de substituir "spark-3.2.0-bin-hadoop3.2.tgz" pelo nome do arquivo que você baixou.  
 
 2. Defina a variável de ambiente `SPARK_HOME` apontando para o diretório do Spark e adicione o diretório `bin` ao seu `PATH`. Você pode fazer isso adicionando as seguintes linhas ao seu arquivo `.bashrc`, `.bash_profile` ou `.zshrc`, dependendo do seu shell:
 
-   ```bash
+   ```
    export SPARK_HOME=/caminho/para/o/diretório/spark-3.2.0
    export PATH=$SPARK_HOME/bin:$PATH
    ```
@@ -85,12 +85,12 @@ Lembre-se de substituir "/caminho/para/o/diretório" pelo caminho real para o di
 
 3. Após salvar as alterações no seu arquivo de perfil, atualize as variáveis de ambiente com o comando:
 
-   ```bash
+   ```
    source ~/.bashrc  # ou source ~/.bash_profile, dependendo do seu arquivo de perfil
    ```
 4. O Apache Spark agora deve estar instalado e configurado em seu sistema. Para verificar a instalação, você pode executar o seguinte comando para iniciar o shell interativo do Spark:
 
-   ```bash
+   ```
    spark-shell
     ```
 Isso iniciará o shell interativo do Spark e indicará que a instalação foi bem-sucedida.
@@ -106,7 +106,7 @@ Este exemplo demonstrará como processar um arquivo de dados em lote usando o Ap
 1. **Criar um arquivo de dados:**
 Crie um arquivo de texto chamado dados.txt com algumas linhas de dados para processamento. Por exemplo:
 
-   ```bash
+   ```
    1,João
    2,Maria
    3,Carlos
@@ -134,7 +134,7 @@ Crie um arquivo Python (por exemplo, `processamento_lote.py`) com o seguinte có
 3. **Executar o Código:**
 Abra um terminal e execute o código Python:
 
-   ```bash
+   ```
    $ spark-submit processamento_lote.py
    ```
 Certifique-se de que o arquivo `dados.txt` esteja na mesma pasta onde você executou o código.
@@ -173,14 +173,14 @@ Crie um arquivo Python (por exemplo, `processamento_tempo_real.py`) com o seguin
 2. **Iniciar a Fonte de Dados em Tempo Real:**
 Em outro terminal, execute uma fonte de dados em tempo real para alimentar o exemplo. Você pode usar o comando `nc` (Netcat) para criar uma fonte de texto:
 
-   ```bash
+   ```
    $ nc -lk 9999
    ```
    
 3. **Executar o Código Spark Streaming:**
 No terminal onde você escreveu o código Spark Streaming, execute o código:
 
-   ```bash
+   ```
    $ spark-submit processamento_tempo_real.py
    ```
 Agora, qualquer texto que você digitar no terminal com o `nc` será processado em tempo real pelo Spark.
@@ -227,7 +227,7 @@ Crie um arquivo Python (por exemplo, `spark_sql_mllib.py`) com o seguinte códig
 3. **Executar o Código:**
 No terminal, execute o código Python:
 
-   ```bash
+   ```
    $ spark-submit spark_sql_mllib.py
    ```
 Certifique-se de que o arquivo `dados.csv` esteja na mesma pasta onde você executou o código.
