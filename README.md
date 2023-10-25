@@ -55,11 +55,11 @@ Se o Java não estiver instalado ou estiver em uma versão anterior, siga as eta
 
 Abra um terminal e execute os seguintes comandos:
 
-  ```bash
-  sudo apt update
-  sudo apt install default-jre
-  sudo apt install default-jdk
-  ```
+```bash
+sudo apt update
+sudo apt install default-jre
+sudo apt install default-jdk
+```
 ### Download do Apache Spark
 
 1. Acesse a [página de downloads do Apache Spark](https://spark.apache.org/downloads.html).
@@ -114,7 +114,7 @@ Crie um arquivo de texto chamado dados.txt com algumas linhas de dados para proc
 2. **Escrever o código Spark:**
 Crie um arquivo Python (por exemplo, `processamento_lote.py`) com o seguinte código para processar o arquivo de dados:
 
-   ```bash
+   ```python
    from pyspark.sql import SparkSession
 
    # Inicialize uma sessão Spark
@@ -148,7 +148,7 @@ Neste exemplo, você aprenderá como usar o Apache Spark para processamento em t
 1. **Escrever o código Spark Streaming:**
 Crie um arquivo Python (por exemplo, `processamento_tempo_real.py`) com o seguinte código para processar dados em tempo real:
 
-   ```bash
+   ```python
    from pyspark.streaming import StreamingContext
 
    # Inicialize o StreamingContext com intervalo de 1 segundo
@@ -193,7 +193,7 @@ Este exemplo demonstrará como usar o Spark SQL e o Spark MLlib para análise de
 1. **Escrever o código Spark SQL e MLlib:**
 Crie um arquivo Python (por exemplo, `spark_sql_mllib.py`) com o seguinte código para realizar uma tarefa de análise de dados simples com o Spark SQL e MLlib:
 
-   ```bash
+   ```python
    from pyspark.sql import SparkSession
    from pyspark.ml.feature import VectorAssembler
    from pyspark.ml.regression import LinearRegression
