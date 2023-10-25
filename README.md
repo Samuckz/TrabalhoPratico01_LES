@@ -55,11 +55,11 @@ Se o Java não estiver instalado ou estiver em uma versão anterior, siga as eta
 
 Abra um terminal e execute os seguintes comandos:
 
-```bash
-sudo apt update
-sudo apt install default-jre
-sudo apt install default-jdk
-```
+  ```bash
+  sudo apt update
+  sudo apt install default-jre
+  sudo apt install default-jdk
+  ```
 ### Download do Apache Spark
 
 1. Acesse a [página de downloads do Apache Spark](https://spark.apache.org/downloads.html).
