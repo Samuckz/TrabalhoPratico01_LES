@@ -324,6 +324,7 @@ No terminal, execute o código Python:
 
    ```
    $ spark-submit spark_sql_mllib.py
+   <output> - Erro Quadrático Médio (RMSE): 1.7763568394002505e-15
    ```
 Certifique-se de que o arquivo `dados.csv` esteja na mesma pasta onde você executou o código.
 
