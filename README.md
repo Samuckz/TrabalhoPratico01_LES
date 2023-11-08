@@ -182,7 +182,7 @@ No terminal onde você escreveu o código Spark Streaming, execute o código:
 
    ```
    $ spark-submit processamento_tempo_real.py
-   ...
+   
    <output> - Total de linhas: 3
    ```
 Agora, qualquer texto que você digitar no terminal com o `nc` será processado em tempo real pelo Spark.
