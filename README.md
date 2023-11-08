@@ -95,6 +95,71 @@ Lembre-se de substituir "/caminho/para/o/diretório" pelo caminho real para o di
     ```
 Isso iniciará o shell interativo do Spark e indicará que a instalação foi bem-sucedida.
 
+### Instalação do Python com Jupyter Notebook
+
+Após a instalação do Apache Spark, será necessário baixar o python para conseguir utilizar a biblioteca pyshark no seu computador. Certifique-se de que você tenha o Python instalado em seu sistema. Você pode verificar se o Python está instalado executando o seguinte comando no seu terminal:
+
+```shell
+python --version
+```
+
+Se o Python não estiver instalado, siga as etapas apropriadas para o seu sistema operacional:
+
+#### Windows
+
+1. Baixe o instalador Python mais recente para Windows em [python.org/downloads](https://www.python.org/downloads/windows/).
+
+2. Execute o instalador baixado e siga as instruções na tela. Certifique-se de marcar a opção "Add Python to PATH" durante a instalação.
+
+#### Linux (Ubuntu)
+
+O Python é pré-instalado na maioria das distribuições Linux. No entanto, você pode instalar o Python 3 com o seguinte comando:
+
+```shell
+sudo apt update
+sudo apt install python3
+```
+
+#### Linux (Fedora)
+
+Para instalar o Python 3 no Fedora, use o seguinte comando:
+
+```shell
+sudo dnf install python3
+```
+
+Após a instalação do Python, você pode instalar o Jupyter Notebook:
+
+1. Abra um terminal e execute o seguinte comando para instalar o Jupyter Notebook:
+
+```shell
+pip install jupyter
+```
+
+2. Depois que o Jupyter Notebook estiver instalado, você pode iniciar o servidor do Jupyter Notebook executando o seguinte comando:
+
+```shell
+jupyter notebook
+```
+
+Isso abrirá o Jupyter Notebook em seu navegador padrão. Você pode criar um novo notebook Python e executar comandos Python nele.
+
+### Instalação do pyshark
+
+Agora que você tem o Python e o Jupyter Notebook instalados, você pode instalar o pyshark, que é uma biblioteca Python para análise de tráfego de rede.
+
+1. Abra um terminal ou o prompt de comando.
+
+2. Execute o seguinte comando para instalar o pyshark usando o pip:
+
+```shell
+pip install pyshark
+```
+
+Após a conclusão da instalação, você pode usar o pyshark em seu ambiente Jupyter Notebook para analisar dados de tráfego de rede.
+
+Lembre-se de que você deve ter o Apache Spark e o arquivo CSV "dados.csv" configurados e prontos, como mencionado no início do README, para executar o código original com sucesso.
+
 ## Exemplos
 Este repositório inclui exemplos práticos de como usar o Apache Spark para tarefas comuns de processamento de dados.
 
