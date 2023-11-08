@@ -153,7 +153,7 @@ Após a conclusão da instalação, você pode usar o pyshark em seu ambiente Ju
 Lembre-se de que você deve ter o Apache Spark e o arquivo CSV "dados.csv" configurados e prontos, como mencionado no início do README, para executar o código original com sucesso.
 
 ### Instalação do numpy
-Para manipular arrays multidimensionais e funções matemáticas de alto desempenho para trabalhar com esses arrays, os quais contém nossos dados, é comum o uso da biblioteca numpy.
+Para manipular arrays multidimensionais e funções matemáticas de alto desempenho para trabalhar com esses arrays, os quais armazenam os dados a manipular, é comum o uso da biblioteca numpy.
    ```
    pip install numpy
    ```
