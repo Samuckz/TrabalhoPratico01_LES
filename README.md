@@ -60,44 +60,36 @@ sudo apt update
 sudo apt install default-jre
 sudo apt install default-jdk
 ```
-### Download do Apache Spark
 
-1. Acesse a [página de downloads do Apache Spark](https://spark.apache.org/downloads.html).
-2. Selecione a versão desejada e o tipo de pacote. Geralmente, você pode escolher entre um arquivo `.tgz` ou `.zip`.
-3. Baixe o arquivo para o seu sistema local.
+### Download JDK
 
-### Instalação do Apache Spark
+Além do Java, você precisrá realizar o download do JDK (Java Development Kit) 
 
-1. Extraia o arquivo baixado em um diretório de sua escolha. Você pode usar um comando como este:
+#### Windows:
 
-   ```
-   tar -xzf spark-3.2.0-bin-hadoop3.2.tgz
-   ```
-Certifique-se de substituir "spark-3.2.0-bin-hadoop3.2.tgz" pelo nome do arquivo que você baixou.  
+1. Acesse o site oficial da Oracle Java em [Oracle Java Downloads](https://www.oracle.com/java/technologies/javase-downloads.html).
+2. Procure a seção "Oracle JDK" e clique no botão "Download" para o JDK correspondente à sua arquitetura (32 bits ou 64 bits).
+3. Você será redirecionado para a página de termos e condições. Aceite os termos e clique em "Download" novamente.
+4. O download do instalador do JDK será iniciado. Execute o instalador baixado e siga as instruções na tela para concluir a instalação.
 
-2. Defina a variável de ambiente `SPARK_HOME` apontando para o diretório do Spark e adicione o diretório `bin` ao seu `PATH`. Você pode fazer isso adicionando as seguintes linhas ao seu arquivo `.bashrc`, `.bash_profile` ou `.zshrc`, dependendo do seu shell:
+#### Linux (Ubuntu):
 
-   ```
-   export SPARK_HOME=/caminho/para/o/diretório/spark-3.2.0
-   export PATH=$SPARK_HOME/bin:$PATH
-   ```
-Lembre-se de substituir "/caminho/para/o/diretório" pelo caminho real para o diretório onde o Spark foi extraído.
+No Ubuntu, você pode instalar o OpenJDK, que é uma implementação de código aberto do Java. Para instalar o OpenJDK 8, siga as etapas abaixo:
 
-3. Após salvar as alterações no seu arquivo de perfil, atualize as variáveis de ambiente com o comando:
+1. Abra um terminal e execute o seguinte comando para instalar o OpenJDK 8:
 
-   ```
-   source ~/.bashrc  # ou source ~/.bash_profile, dependendo do seu arquivo de perfil
-   ```
-4. O Apache Spark agora deve estar instalado e configurado em seu sistema. Para verificar a instalação, você pode executar o seguinte comando para iniciar o shell interativo do Spark:
+```shell
+sudo apt update
+sudo apt install openjdk-8-jdk
+```
 
-   ```
-   spark-shell
-    ```
-Isso iniciará o shell interativo do Spark e indicará que a instalação foi bem-sucedida.
+2. Após a instalação, você pode verificar a versão do Java com o seguinte comando:
+
+Agora, com o JDK devidamente instalado em seu sistema, você pode prosseguir com a instalação e configuração do Apache Spark e seguir as etapas do README anteriormente fornecido para instalar o Python com o Jupyter Notebook e a biblioteca pyshark. Certifique-se de configurar as variáveis de ambiente necessárias para o JDK, como a variável `JAVA_HOME`.
 
 ### Instalação do Python com Jupyter Notebook
 
-Após a instalação do Apache Spark, será necessário baixar o python para conseguir utilizar a biblioteca pyshark no seu computador. Certifique-se de que você tenha o Python instalado em seu sistema. Você pode verificar se o Python está instalado executando o seguinte comando no seu terminal:
+2. Após a instalação do Apache Spark, será necessário baixar o python para conseguir utilizar a biblioteca pyshark no seu computador. Certifique-se de que você tenha o Python instalado em seu sistema. Você pode verificar se o Python está instalado executando o seguinte comando no seu terminal:
 
 ```shell
 python --version
@@ -159,6 +151,42 @@ pip install pyshark
 Após a conclusão da instalação, você pode usar o pyshark em seu ambiente Jupyter Notebook para analisar dados de tráfego de rede.
 
 Lembre-se de que você deve ter o Apache Spark e o arquivo CSV "dados.csv" configurados e prontos, como mencionado no início do README, para executar o código original com sucesso.
+
+### Download do Apache Spark
+
+1. Acesse a [página de downloads do Apache Spark](https://spark.apache.org/downloads.html).
+2. Selecione a versão desejada e o tipo de pacote. Geralmente, você pode escolher entre um arquivo `.tgz` ou `.zip`.
+3. Baixe o arquivo para o seu sistema local.
+
+### Instalação do Apache Spark
+
+1. Extraia o arquivo baixado em um diretório de sua escolha. Você pode usar um comando como este:
+
+   ```
+   tar -xzf spark-3.2.0-bin-hadoop3.2.tgz
+   ```
+Certifique-se de substituir "spark-3.2.0-bin-hadoop3.2.tgz" pelo nome do arquivo que você baixou.  
+
+2. Defina a variável de ambiente `SPARK_HOME` apontando para o diretório do Spark e adicione o diretório `bin` ao seu `PATH`. Você pode fazer isso adicionando as seguintes linhas ao seu arquivo `.bashrc`, `.bash_profile` ou `.zshrc`, dependendo do seu shell:
+
+   ```
+   export SPARK_HOME=/caminho/para/o/diretório/spark-3.2.0
+   export PATH=$SPARK_HOME/bin:$PATH
+   ```
+Lembre-se de substituir "/caminho/para/o/diretório" pelo caminho real para o diretório onde o Spark foi extraído.
+
+3. Após salvar as alterações no seu arquivo de perfil, atualize as variáveis de ambiente com o comando:
+
+   ```
+   source ~/.bashrc  # ou source ~/.bash_profile, dependendo do seu arquivo de perfil
+   ```
+4. O Apache Spark agora deve estar instalado e configurado em seu sistema. Para verificar a instalação, você pode executar o seguinte comando para iniciar o shell interativo do Spark:
+
+   ```
+   spark-shell
+    ```
+Isso iniciará o shell interativo do Spark e indicará que a instalação foi bem-sucedida.
+
 
 ## Exemplos
 Este repositório inclui exemplos práticos de como usar o Apache Spark para tarefas comuns de processamento de dados.
