@@ -154,6 +154,9 @@ Lembre-se de que você deve ter o Apache Spark e o arquivo CSV "dados.csv" confi
 
 ### Instalação do numpy
 Para manipular arrays multidimensionais e funções matemáticas de alto desempenho para trabalhar com esses arrays, os quais contém nossos dados, é comum o uso da biblioteca numpy.
+   ```
+   pip install numpy
+   ```
 
 ### Download do Apache Spark
 
@@ -162,10 +165,7 @@ Para manipular arrays multidimensionais e funções matemáticas de alto desempe
 3. Baixe o arquivo para o seu sistema local.
 
 ### Instalação do Apache Spark
-   ...
-   pip install numpy
-   ...
-
+   
 1. Extraia o arquivo baixado em um diretório de sua escolha. Você pode usar um comando como este:
 
    ```
